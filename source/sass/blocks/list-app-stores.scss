@@ -1,0 +1,11 @@
+.list-app-stores {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  @include resetList();
+}
+
+.list-app-stores__item {
+  @include setMargin($t: 5px, $r: calc(35px / 2), $b: 5px, $l: calc(35px / 2));
+}

@@ -1,0 +1,61 @@
+.list-app-features {
+  @include resetList();
+  @include setBackground(
+    $color: $basic-gray-light-2,
+    $image: linear-gradient(174deg, $basic-white 10%, $basic-gray-light-2 10%),
+    $size: 1172px auto
+  );
+  @include setPadding($t: 144px, $r: 25px, $l: 25px);
+  @include setMargin($t: -31px, $b: 0);
+}
+
+.list-app-features__item:last-of-type .list-app-features__image-wrapper {
+  display: block;
+}
+
+.list-app-features__item {
+  @include setMargin($b: 31px);
+
+  &:last-of-type {
+    @include setMargin($b: 0);
+  }
+}
+
+.list-app-features__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.list-app-features__image-wrapper {
+  display: none;
+  @include setBlockSize($width: 157px, $height: 320px);
+  position: relative;
+  @include setPosition($t: 42px);
+}
+
+.list-app-features__image {
+  @include setBlockSize($width: 100%, $height: 100%, $max-width: 100%);
+  object-fit: cover;
+}
+
+.list-app-features__title {
+  @include setMargin($t: 0, $b: 12px);
+  @include setFont(
+    $font-size: 18px,
+    $line-height: 24px,
+    $text-align: center,
+    $color: $basic-black
+  );
+}
+
+.list-app-features__subtitle {
+  @include setMargin($t: 0, $b: 0);
+  @include setFont(
+    $font-size: 14px,
+    $line-height: 24px,
+    $text-align: center,
+    $color: $basic-blue
+  );
+}

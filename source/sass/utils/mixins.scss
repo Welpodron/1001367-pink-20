@@ -1,0 +1,231 @@
+@mixin setFont(
+  $font-family: 0,
+  $font-style: 0,
+  $font-weight: 0,
+  $font-size: none,
+  $line-height: none,
+  $text-align: 0,
+  $letter-spacing: none,
+  $text-transform: 0,
+  $text-decoration: 0,
+  $color: none
+) {
+  @if $font-family != 0 {
+    font-family: $font-family;
+  }
+
+  @if $font-style != 0 {
+    font-style: $font-style;
+  }
+
+  @if $font-weight != 0 {
+    font-weight: $font-weight;
+  }
+
+  @if $font-size != none {
+    font-size: $font-size;
+  }
+
+  @if $line-height != none {
+    line-height: $line-height;
+  }
+
+  @if $text-align != 0 {
+    text-align: $text-align;
+  }
+
+  @if $letter-spacing != none {
+    letter-spacing: $letter-spacing;
+  }
+
+  @if $text-transform != 0 {
+    text-transform: $text-transform;
+  }
+
+  @if $text-decoration != 0 {
+    text-decoration: $text-decoration;
+  }
+
+  @if $color != none {
+    color: $color;
+  }
+}
+
+@mixin setBackground(
+  $color: none,
+  $image: none,
+  $size: none,
+  $position: none,
+  $repeat: no-repeat
+) {
+  @if $color != none {
+    background-color: $color;
+  }
+
+  @if $image != none {
+    background-image: $image;
+  }
+
+  @if $size != none {
+    background-size: $size;
+  }
+
+  @if $position != none {
+    background-position: $position;
+  }
+
+  @if $repeat != no-repeat {
+    background-repeat: $repeat;
+  } @else {
+    background-repeat: $repeat;
+  }
+}
+
+@mixin setBlockSize(
+  $min-width: none,
+  $min-height: none,
+  $width: none,
+  $height: none,
+  $max-width: none,
+  $max-height: none
+) {
+  @if $min-width != none {
+    min-width: $min-width;
+  }
+  @if $min-height != none {
+    min-height: $min-height;
+  }
+  @if $width != none {
+    width: $width;
+  }
+  @if $height != none {
+    height: $height;
+  }
+  @if $max-width != none {
+    max-width: $max-width;
+  }
+  @if $max-height != none {
+    max-height: $max-height;
+  }
+}
+
+@mixin setMargin($t: none, $r: none, $b: none, $l: none, $all: none) {
+  @if $t != none {
+    margin-top: $t;
+  }
+  @if $r != none {
+    margin-right: $r;
+  }
+  @if $b != none {
+    margin-bottom: $b;
+  }
+  @if $l != none {
+    margin-left: $l;
+  }
+  @if $all != none {
+    @include setMargin($t: $all, $r: $all, $b: $all, $l: $all);
+  }
+}
+
+@mixin setPadding($t: none, $r: none, $b: none, $l: none, $all: none) {
+  @if $t != none {
+    padding-top: $t;
+  }
+  @if $r != none {
+    padding-right: $r;
+  }
+  @if $b != none {
+    padding-bottom: $b;
+  }
+  @if $l != none {
+    padding-left: $l;
+  }
+  @if $all != none {
+    @include setPadding($t: $all, $r: $all, $b: $all, $l: $all);
+  }
+}
+
+@mixin setBorder($t: 0, $r: 0, $b: 0, $l: 0, $all: 0) {
+  @if $t != 0 {
+    border-top: $t;
+  }
+  @if $r != 0 {
+    border-right: $r;
+  }
+  @if $b != 0 {
+    border-bottom: $b;
+  }
+  @if $l != 0 {
+    border-left: $l;
+  }
+  @if $all != 0 {
+    @include setBorder($t: $all, $r: $all, $b: $all, $l: $all);
+  }
+}
+
+@mixin setBorderColor($t: 0, $r: 0, $b: 0, $l: 0, $all: 0, $color: none) {
+  @if $t != 0 {
+    border-top-color: $color;
+  }
+  @if $r != 0 {
+    border-right-color: $color;
+  }
+  @if $b != 0 {
+    border-bottom-color: $color;
+  }
+  @if $l != 0 {
+    border-left-color: $color;
+  }
+  @if $all != 0 {
+    @include setBorderColor(
+      $t: $all,
+      $r: $all,
+      $b: $all,
+      $l: $all,
+      $color: $color
+    );
+  }
+}
+
+@mixin setBorderRadius($tl: none, $tr: none, $br: none, $bl: none, $all: none) {
+  @if $tl != none {
+    border-top-left-radius: $tl;
+  }
+  @if $tr != none {
+    border-top-right-radius: $tr;
+  }
+  @if $br != none {
+    border-bottom-right-radius: $br;
+  }
+  @if $bl != none {
+    border-bottom-left-radius: $bl;
+  }
+  @if $all != none {
+    @include setBorderRadius($tl: $all, $tr: $all, $br: $all, $bl: $all);
+  }
+}
+
+@mixin setPosition($t: none, $r: none, $b: none, $l: none) {
+  @if $t != none {
+    top: $t;
+  }
+  @if $r != none {
+    right: $r;
+  }
+  @if $b != none {
+    bottom: $b;
+  }
+  @if $l != none {
+    left: $l;
+  }
+}
+
+@mixin resetList {
+  list-style: none;
+  @include setPadding($l: 0);
+  @include setMargin($t: 0, $b: 0);
+}
+
+@mixin resetBlockquote {
+  @include setMargin($all: 0);
+}

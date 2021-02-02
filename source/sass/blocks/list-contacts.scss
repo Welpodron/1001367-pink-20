@@ -1,0 +1,45 @@
+.list-contacts {
+  @include resetList();
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list-contacts__link {
+  @include setFont(
+    $font-style: normal,
+    $font-weight: $light,
+    $font-size: 24px,
+    $line-height: 33px,
+    $text-align: center,
+    $color: $basic-pink
+  );
+}
+
+.list-contacts__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &::before {
+    @include setFont(
+      $font-weight: bold,
+      $font-size: 18px,
+      $line-height: 25px,
+      $text-align: center,
+      $color: $basic-blue
+    );
+
+    @include setMargin($b: 10px);
+  }
+
+  &--tel::before {
+    content: "Звоните:";
+  }
+  &--email::before {
+    content: "Пишите:";
+  }
+  &--address::before {
+    content: "Приезжайте в гости:";
+  }
+}

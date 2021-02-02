@@ -1,1 +1,22 @@
-// Начните писать стили здесь
+@import "assets/fonts.scss";
+@import "assets/colors.scss";
+@import "assets/variables.scss";
+@import "utils/mixins.scss";
+@import "blocks/global/global.scss";
+@import "blocks/wrapper.scss";
+@import "blocks/list-app-stores.scss";
+@import "blocks/list-app-features.scss";
+@import "blocks/list-contacts.scss";
+@import "blocks/list-reviews.scss";
+@import "blocks/list-slider-toggles.scss";
+@import "blocks/list-slider-buttons.scss";
+@import "blocks/list-socials.scss";
+@import "blocks/table-rates.scss";
+@import "blocks/page-nav.scss";
+@import "blocks/page-copyright.scss";
+@import "blocks/section-intro.scss";
+@import "blocks/section-info.scss";
+@import "blocks/section-contacts.scss";
+@import "blocks/section-research.scss";
+@import "blocks/section-rates.scss";
+@import "blocks/section-reviews.scss";

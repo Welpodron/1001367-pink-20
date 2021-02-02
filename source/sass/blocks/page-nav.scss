@@ -1,0 +1,13 @@
+.page-nav__link {
+  @include setFont(
+    $font-weight: bold,
+    $font-size: 18px,
+    $line-height: 32px,
+    $text-transform: uppercase,
+    $color: $basic-white
+  );
+}
+
+.page-nav__list {
+  @include resetList();
+}

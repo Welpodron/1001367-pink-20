@@ -1,0 +1,85 @@
+.table-rates {
+  display: grid;
+}
+
+.table-rates__head {
+  display: block;
+}
+
+.table-rates__head-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.table-rates__body {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.table-rates__body-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.table-rates__head-cell {
+  display: block;
+  @include setBackground($color: $basic-blue);
+  @include setPadding($all: 20px);
+  @include setBorder(
+    $r: 2px solid $basic-gray-light,
+    $l: 2px solid $basic-gray-light
+  );
+  @include setMargin($l: -2px);
+}
+
+.table-rates__rate {
+  @include setFont(
+    $font-size: 16px,
+    $line-height: 30px,
+    $text-align: center,
+    $text-transform: uppercase,
+    $color: $basic-white
+  );
+}
+
+.table-rates__price {
+  @include setFont(
+    $font-weight: $light,
+    $font-size: 18px,
+    $line-height: 30px,
+    $text-align: center,
+    $text-transform: uppercase,
+    $color: $basic-white
+  );
+}
+
+.table-rates__body-cell {
+  display: block;
+  @include setPadding($all: 20px);
+  @include setBorder($all: 2px solid $basic-gray-light);
+  @include setMargin($t: -2px, $l: -2px);
+
+  &--feature {
+    display: none;
+  }
+}
+
+.table-rates__availability {
+  display: flex;
+  align-items: center;
+  @include setBlockSize($width: 275px);
+
+  &::before {
+    @include setFont(
+      $font-size: 14px,
+      $line-height: 30px,
+      $text-transform: uppercase,
+      $color: $basic-blue
+    );
+    content: attr(data-value);
+  }
+}
+
+.table-rates__icon {
+  flex-shrink: 0;
+}
