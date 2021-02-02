@@ -1,0 +1,9 @@
+.section-contacts__description {
+  @include setFont(
+    $font-weight: $light,
+    $font-size: 24px,
+    $line-height: 29px,
+    $text-align: center,
+    $color: $basic-blue
+  );
+}

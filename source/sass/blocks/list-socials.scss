@@ -1,0 +1,23 @@
+.list-socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  @include resetList();
+}
+
+.list-socials__item {
+  @include setMargin($all: 7px);
+}
+
+.list-socials__link {
+  display: flex;
+  @include setBlockSize($width: 48px, $height: 48px);
+  @include setBorder($all: 3px solid $basic-blue);
+  @include setBorderRadius($all: 50%);
+}
+
+.list-socials__icon {
+  fill: $basic-pink;
+  @include setMargin($all: auto);
+}

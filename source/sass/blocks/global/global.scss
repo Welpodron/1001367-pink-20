@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include setFont($font-family: $fontFamily);
+  @include setMargin($all: 0);
+  word-break: break-word;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  @include setBlockSize($width: 1px, $height: 1px);
+  @include setMargin($all: -1px);
+  @include setPadding($all: 0);
+  @include setBorder($all: none);
+
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}

@@ -1,0 +1,11 @@
+.section-reviews__wrapper {
+  @include setPadding($t: 39px);
+}
+
+.section-reviews__list-reviews {
+  @include setMargin($b: 15px);
+}
+
+.section-reviews__list-slider-buttons {
+  display: none;
+}

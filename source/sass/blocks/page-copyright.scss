@@ -1,0 +1,10 @@
+.page-copyright {
+  @include setFont($font-size: 14px, $line-height: 18px, $color: $basic-blue);
+  display: inline-flex;
+  align-items: center;
+}
+
+.page-copyright__icon {
+  flex-shrink: 0;
+  fill: $basic-pink;
+}

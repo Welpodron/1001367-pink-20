@@ -1,0 +1,20 @@
+.list-slider-toggles {
+  @include resetList();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-slider-toggles__item {
+  @include setMargin($all: 19px);
+}
+
+.list-slider-toggles__button {
+  display: flex;
+  @include setBackground($color: $basic-blue);
+  @include setBorderRadius($all: 50%);
+  @include setBlockSize($width: 6px, $height: 6px);
+  @include setPadding($all: 0);
+  @include setBorder($all: 3px solid $basic-blue);
+}

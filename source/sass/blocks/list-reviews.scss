@@ -1,0 +1,39 @@
+.list-reviews {
+  @include resetList();
+}
+
+.list-reviews__blockquote {
+  display: flex;
+  flex-direction: column;
+  @include resetBlockquote();
+}
+
+.list-reviews__author {
+  display: flex;
+  flex-direction: column;
+  @include setMargin($b: 13px);
+}
+
+.list-reviews__author-name {
+  @include setFont(
+    $font-style: normal,
+    $font-weight: bold,
+    $font-size: 18px,
+    $line-height: 30px,
+    $text-align: center,
+    $color: $basic-black
+  );
+}
+
+.list-reviews__author-description {
+  display: none;
+}
+
+.list-reviews__quote {
+  @include setFont(
+    $font-size: 14px,
+    $line-height: 30px,
+    $text-align: center,
+    $color: $basic-blue
+  );
+}
